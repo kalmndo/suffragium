@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@suffragium/storybook",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,7 +17,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }
 }
