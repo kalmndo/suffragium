@@ -1,12 +1,11 @@
 import React,{ forwardRef, ReactNode, useId, useState } from "react";
-import { useLocale } from "@suffragium/lib/hooks/useLocale";
 import { classNames } from "@suffragium/lib";
 import { Input } from "./input";
 import { Label } from "./label";
 import { Skeleton } from "../..";
 import { Addon } from "./Addon";
 
-type InputFieldProps = {
+export type InputFieldProps = {
   label?: ReactNode;
   hint?: ReactNode;
   hintErrors?: string[];
@@ -26,14 +25,12 @@ type InputFieldProps = {
 
 export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function InputField(props, ref) {
   const id = useId();
-  const { t: _t, isLocaleReady, i18n } = useLocale();
-  const t = props.t || _t;
   const name = props.name || "";
   const {
-    label = t(name),
+    label = name,
     labelProps,
     labelClassName,
-    placeholder = isLocaleReady && i18n.exists(name + "_placeholder") ? t(name + "_placeholder") : "",
+    placeholder = "placeholder",
     className,
     addOnLeading,
     addOnSuffix,

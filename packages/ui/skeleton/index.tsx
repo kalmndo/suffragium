@@ -1,7 +1,6 @@
 import React from "react";
 
 import classNames from "@suffragium/lib/classNames";
-import { useLocale } from "@suffragium/lib/hooks/useLocale";
 
 type SkeletonBaseProps = {
   className?: string;
@@ -45,8 +44,6 @@ const Skeleton = <T extends keyof JSX.IntrinsicElements | React.FC>({
   loadingClassName = "",
   ...rest
 }: SkeletonProps<T>) => {
-  const { isLocaleReady } = useLocale();
-  loading = (waitForTranslation ? !isLocaleReady : false) || loading;
   const Component = as;
   return (
     <Component

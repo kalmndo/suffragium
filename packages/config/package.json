@@ -14,7 +14,8 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-turbo": "^0.0.7",
     "eslint-plugin-playwright": "^0.12.0",
-    "eslint-plugin-prettier": "^4.2.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "tailwindcss-radix": "^2.8.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",

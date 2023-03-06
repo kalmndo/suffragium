@@ -1,8 +1,7 @@
+const base = require("@suffragium/config/tailwind-preset");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+  ...base,
+  darkMode: ["class", '[data-mode="dark"]'],
+  content: [...base.content, "../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}", "./stories/**/*.{js,ts,tsx,jsx}"],
+};
