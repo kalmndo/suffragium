@@ -1,8 +1,6 @@
+const base = require("@suffragium/config/tailwind-preset");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+  ...base,
+  content: [...base.content],
+};
