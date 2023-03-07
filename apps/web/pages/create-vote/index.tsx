@@ -1,11 +1,10 @@
+import Header from "../../components/header";
 import Layout from "../../components/layout/Layout";
 
 export default function createVote() {
   return (
     <Layout>
-      <div className="flex flex-col w-full min-h-screen items-center">
-        create vote
-      </div>
+      <Header title="Create Vote" subtitle="Create vote to share for people" />
     </Layout>
   );
 }

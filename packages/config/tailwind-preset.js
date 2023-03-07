@@ -7,11 +7,9 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "../../packages/app-store/**/*{components,pages}/**/*.{js,ts,jsx,tsx}",
-    "../../packages/features/**/*.{js,ts,jsx,tsx}",
     "../../packages/ui/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -162,7 +160,7 @@ module.exports = {
         dropdown: "0px 2px 6px -1px rgba(0, 0, 0, 0.08)",
       },
       fontFamily: {
-        cal: ["var(--font-cal)", ...fontFamily.serif],
+        poppins: ["var(--font-poppins)", ...fontFamily.serif],
         sans: ["var(--font-inter)", ...fontFamily.sans],
         mono: ["Roboto Mono", "monospace"],
       },
@@ -193,7 +191,8 @@ module.exports = {
         screen: "100vw",
       }),
       backgroundImage: {
-        "gradient-primary": "radial-gradient(162.05% 170% at 109.58% 35%, #667593 0%, #E3E3E3 100%)",
+        "gradient-primary":
+          "radial-gradient(162.05% 170% at 109.58% 35%, #667593 0%, #E3E3E3 100%)",
       },
     },
   },

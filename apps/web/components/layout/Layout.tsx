@@ -1,14 +1,15 @@
-import { PropsWithChildren } from "react";
 import Header from "./Header";
+import { PropsWithChildren } from "react";
 
-export default function Layout({children}: PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
   return (
     <div>
       <Header />
       <div>
-
-      {children}
+        <div className="flex flex-col w-full min-h-screen items-center">
+          <div className="max-w-3xl	w-full">{children}</div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
