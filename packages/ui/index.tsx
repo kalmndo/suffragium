@@ -1,4 +1,5 @@
 import * as React from "react";
+
 export * from "./Button";
 export {
   Skeleton,
@@ -8,3 +9,5 @@ export {
   SkeletonText,
   Loader,
 } from "./skeleton";
+
+export { Addon, Input, InputField, Label } from "./forms/inputs";

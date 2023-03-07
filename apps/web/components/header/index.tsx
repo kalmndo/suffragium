@@ -5,8 +5,8 @@ interface Header {
 
 export default function Header(props: Header) {
   return (
-    <div className="pt-12">
-      <h3 className="font-popppins font-semibold text-xl text-black tracking-wide">
+    <div className="pt-12 pb-12">
+      <h3 className="font-popppins font-semibold text-xl text-black tracking-tight">
         {props.title}
       </h3>
       <p className="text-sm font-light text-gray-500">{props.subtitle}</p>
