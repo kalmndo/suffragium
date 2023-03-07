@@ -1,3 +1,14 @@
-export default function Layout() {
-  return <div>layout</div>
+import { PropsWithChildren } from "react";
+import Header from "./Header";
+
+export default function Layout({children}: PropsWithChildren) {
+  return (
+    <div>
+      <Header />
+      <div>
+
+      {children}
+      </div>
+    </div>
+  )
 }
