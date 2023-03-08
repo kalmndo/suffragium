@@ -1,6 +1,8 @@
 import Header from "../../components/header";
 import Layout from "../../components/layout/Layout";
-import { InputField } from "@suffragium/ui";
+import { Button, Input, InputField } from "@suffragium/ui";
+import { FiPlus } from "@suffragium/ui/icon";
+import Candidates from "../../components/create-vote/Candidates";
 
 export default function createVote() {
   return (
@@ -9,7 +11,9 @@ export default function createVote() {
       <div className="space-y-8">
         <InputField name="Title" />
         <InputField name="Description" />
-        <InputField name="Candidate" />
+        <Candidates />
+        <InputField name="Description" />
+
       </div>
     </Layout>
   );

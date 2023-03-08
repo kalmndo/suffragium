@@ -1,6 +1,3 @@
-import * as React from "react";
-
-export * from "./Button";
 export {
   Skeleton,
   SkeletonAvatar,
@@ -11,3 +8,7 @@ export {
 } from "./skeleton";
 
 export { Addon, Input, InputField, Label } from "./forms/inputs";
+
+export { Button, LinkIconButton } from './button'
+export type { ButtonBaseProps, ButtonProps } from './button'
+export type { ButtonColor } from "./button/Button";
