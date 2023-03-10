@@ -9,6 +9,7 @@ export {
 
 export { Addon, Input, InputField, Label } from "./forms/inputs";
 
-export { Button, LinkIconButton } from './button'
+export { Button } from './button'
+export { ButtonGroup } from './buttonGroup'
 export type { ButtonBaseProps, ButtonProps } from './button'
 export type { ButtonColor } from "./button/Button";
