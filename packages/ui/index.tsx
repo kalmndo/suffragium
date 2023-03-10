@@ -13,3 +13,4 @@ export { Button } from './button'
 export { ButtonGroup } from './buttonGroup'
 export type { ButtonBaseProps, ButtonProps } from './button'
 export type { ButtonColor } from "./button/Button";
+export {CardVote } from './cards'

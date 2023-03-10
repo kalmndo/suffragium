@@ -1,0 +1,1 @@
+export { CardVote } from './CardVote'
