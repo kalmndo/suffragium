@@ -1,4 +1,4 @@
-import { ButtonGroup, Button } from "@suffragium/ui";
+import { ButtonGroup, Button, CardStartEndDate } from "@suffragium/ui";
 import { FiExternalLink, FiLink } from "@suffragium/ui/icon";
 import { Tooltip } from "@suffragium/ui/tooltip";
 import Header from "../../components/header";
@@ -22,7 +22,7 @@ export default function VoteDetail() {
         }
         isBack
       />
-
+      <CardStartEndDate />
     </Layout>
   )
 }
