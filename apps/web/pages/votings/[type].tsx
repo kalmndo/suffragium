@@ -15,6 +15,24 @@ const mock = [
   }
 ]
 
+const mockTable = [
+  {
+    date: '12-12-2023, 02:30 AM',
+    address: '0xasdf9efjefj',
+    vote: "Walter js"
+  },
+  {
+    date: '12-12-2023, 02:30 AM',
+    address: '0xasdf9efjefj',
+    vote: "Walter js"
+  },
+  {
+    date: '12-12-2023, 02:30 AM',
+    address: '0xasdf9efjefj',
+    vote: "Walter js"
+  },
+]
+
 export default function VoteDetail() {
   return (
     <Layout>
@@ -45,6 +63,26 @@ export default function VoteDetail() {
             )
           })}
         </div>
+      </div>
+      <div className="pt-16 pb-20">
+        <table className="table-auto w-full text-sm">
+          <thead>
+            <tr>
+              <th className="font-medium p-4 pl-8 pt-0 pb-3 text-left">Date</th>
+              <th className="font-medium p-4 pt-0 pb-3 text-left">Address</th>
+              <th className="font-medium p-4 pr-8 pt-0 pb-3 text-left">Vote</th>
+            </tr>
+          </thead>
+          <tbody className="border">
+            {mockTable.map((v, i) => (
+              <tr key={i} className="border-b"> 
+                <td className="font-light p-4 pl-8">{v.date}</td>
+                <td className="font-light p-4">{v.address}</td>
+                <td className="font-light p-4 pr-8">{v.vote}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </Layout>
   )
