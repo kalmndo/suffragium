@@ -13,5 +13,5 @@ export { Button } from './button'
 export { ButtonGroup } from './buttonGroup'
 export type { ButtonBaseProps, ButtonProps } from './button'
 export type { ButtonColor } from "./button/Button";
-export { CardVote, CardStartEndDate } from './cards'
+export { CardVote, CardStartEndDate, CardVoters } from './cards'
 export { Badge } from './badge/'
