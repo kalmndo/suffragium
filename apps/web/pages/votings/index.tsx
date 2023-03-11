@@ -15,7 +15,7 @@ export default function votings() {
           <Button color="minimal">Past</Button>
         </ButtonGroup>
       </div>
-      {[0, 1, 2].map((a, i) => (
+      {[0, 1, 2].map((_a, i) => (
         <div key={i} className='pb-3'>
 
           <CardVote />

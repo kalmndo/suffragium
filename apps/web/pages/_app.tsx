@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const poppinsFont = Poppins({
 
 export default function MyApp({ Component, pageProps }: any) {
   return (
-    <>
+    <TooltipProvider>
       <style jsx global>{`
         :root {
           --font-poppins: ${poppinsFont.style.fontFamily};
@@ -27,6 +28,6 @@ export default function MyApp({ Component, pageProps }: any) {
         }
       `}</style>
       <Component {...pageProps} />
-    </>
+    </TooltipProvider>
   );
 }
