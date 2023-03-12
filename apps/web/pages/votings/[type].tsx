@@ -73,9 +73,9 @@ export default function VoteDetail() {
               <th className="font-medium p-4 pr-8 pt-0 pb-3 text-left">Vote</th>
             </tr>
           </thead>
-          <tbody className="border">
+          <tbody className="rounded-md border-none shadow-[0_0_0_1px_rgba(229,231,235)]">
             {mockTable.map((v, i) => (
-              <tr key={i} className="border-b"> 
+              <tr key={i} className="border-b last:border-0">
                 <td className="font-light p-4 pl-8">{v.date}</td>
                 <td className="font-light p-4">{v.address}</td>
                 <td className="font-light p-4 pr-8">{v.vote}</td>
@@ -83,7 +83,10 @@ export default function VoteDetail() {
             ))}
           </tbody>
         </table>
+        <div className="flex justify-center mt-4">
+          <Button color="minimal" StartIcon={FiExternalLink}>See on Ethereum explorer to see more</Button>
+        </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }
