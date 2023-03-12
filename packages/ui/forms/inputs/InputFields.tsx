@@ -1,4 +1,4 @@
-import React,{ forwardRef, ReactNode, useId, useState } from "react";
+import React, { forwardRef, ReactNode, useId, useState } from "react";
 import { classNames } from "@suffragium/lib";
 import { Input } from "./input";
 import { Label } from "./label";
@@ -19,9 +19,9 @@ export type InputFieldProps = {
   containerClassName?: string;
   t?: (key: string) => string;
 } & React.ComponentProps<typeof Input> & {
-    labelProps?: React.ComponentProps<typeof Label>;
-    labelClassName?: string;
-  };
+  labelProps?: React.ComponentProps<typeof Label>;
+  labelClassName?: string;
+};
 
 export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function InputField(props, ref) {
   const id = useId();
@@ -43,7 +43,6 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function
     labelSrOnly,
     containerClassName,
     readOnly,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     t: __t,
     ...passThrough
   } = props;
@@ -68,7 +67,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function
             <Addon
               isFilled={addOnFilled}
               className={classNames(
-                "ltr:rounded-l-md ltr:border-r-0 rtl:rounded-r-md rtl:border-l-0",
+                "rounded-l-md border-r-0",
                 addOnClassname
               )}>
               {addOnLeading}
@@ -81,8 +80,8 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function
             isFullWidth={inputIsFullWidth}
             className={classNames(
               className,
-              addOnLeading && "ltr:rounded-l-none rtl:rounded-r-none",
-              addOnSuffix && "ltr:rounded-r-none rtl:rounded-l-none",
+              addOnLeading && "rounded-l-none",
+              addOnSuffix && "rounded-r-none",
               type === "search" && "pr-8",
               "!my-0 !ring-0"
             )}
@@ -107,7 +106,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(function
               {addOnSuffix}
             </Addon>
           )}
-          
+
         </div>
       ) : (
         <Input
