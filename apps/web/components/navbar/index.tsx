@@ -21,9 +21,9 @@ export default function Navbar() {
     <nav className="bg-white shadow">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <div className="font-bold text-xl">
+          <Link href='/' className="font-bold text-xl ">
             Suffragium
-          </div>
+          </Link>
           <div className="hidden sm:flex sm:items-center space-x-4">
             {links.map((v, i) => (
               <Link className="text-sm font-semibold hover:bg-gray-100 px-4 py-2.5 rounded-md" key={i} href={v.href}>
