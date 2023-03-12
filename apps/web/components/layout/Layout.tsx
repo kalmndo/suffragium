@@ -5,11 +5,9 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <div>
       <Header />
-      <div>
-        <div className="flex flex-col w-full min-h-screen items-center">
+        <div className="bg-white flex flex-col w-full min-h-screen items-center">
           <div className="max-w-3xl	w-full">{children}</div>
         </div>
-      </div>
     </div>
   );
 }

@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body  {
+body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  background-color: #f3f4f6;
 }
 
 :root {
