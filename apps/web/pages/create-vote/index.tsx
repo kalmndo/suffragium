@@ -1,8 +1,8 @@
 import Header from "../../components/header";
 import Layout from "../../components/layout/Layout";
-import { Button, Input, InputField } from "@suffragium/ui";
-import { FiPlus } from "@suffragium/ui/icon";
+import { Button, Divider, InputField } from "@suffragium/ui";
 import Candidates from "../../components/create-vote/Candidates";
+import PrivateListInput from "../../components/create-vote/PrivateList";
 
 export default function createVote() {
   return (
@@ -13,7 +13,9 @@ export default function createVote() {
         <InputField name="Description" />
         <Candidates />
         <InputField name="Description" />
-
+        <Divider />
+        <PrivateListInput />
+        <Button>Create Vote</Button>
       </div>
     </Layout>
   );

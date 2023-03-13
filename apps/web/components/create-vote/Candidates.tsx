@@ -11,14 +11,9 @@ export default function Candidates() {
     setCandidates([...candidates, "new"]);
   };
 
-  const removeCandidate = (value: number) => {
-    const newCandidate = candidates.filter((_, v) => {
-      if (v === value) {
-        candidates.push("");
-        return false;
-      }
-      return true;
-    });
+  const removeCandidate = (index: number) => {
+    const newCandidate = [...candidates];
+    newCandidate.splice(index, 1);
     setCandidates(newCandidate);
   };
 
@@ -27,31 +22,33 @@ export default function Candidates() {
       <Label>Candidates</Label>
       <ul ref={animateRef}>
         {candidates.map((v, i) => {
-          console.log('o', i)
           return (
-            <div key={i} className="flex space-x-2 text-sm">
+            <li key={i} className="flex space-x-2 text-sm">
               <Input
                 name={`candidate-${i}`}
                 placeholder="candidate"
                 value={v}
                 defaultValue={''}
               />
-              <Button
-                variant="icon"
-                StartIcon={FiTrash}
-                color="destructive"
-                disabled={candidates.length < 3}
-                onClick={() => {
-                  removeCandidate(i);
-                }}
-              />
-            </div>
+              {candidates.length > 2 &&
+
+                <Button
+                  variant="icon"
+                  StartIcon={FiTrash}
+                  color="destructive"
+                  disabled={candidates.length < 3}
+                  onClick={() => {
+                    removeCandidate(i);
+                  }}
+                />
+              }
+            </li>
           );
         })}
-        <Button color="minimal" StartIcon={FiPlus} onClick={addCandidates}>
-          Add more
-        </Button>
       </ul>
+      <Button color="minimal" StartIcon={FiPlus} onClick={addCandidates}>
+        Add more
+      </Button>
     </div>
   );
 }
